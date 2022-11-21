@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>tvguho@bowrpgvbanel.pbz</string>
+	<key>contactName</key>
+	<string>Objectionary</string>
+	<key>description</key>
+	<string>EOLANG, an Experimental Object-Oriented Programming Language Based on 𝜑-calculus.</string>
+	<key>name</key>
+	<string>EOLANG</string>
+	<key>uuid</key>
+	<string>1D43CC9A-CDF2-4842-A343-3549DA5F0BE9</string>
+</dict>
+</plist>
