@@ -71,12 +71,6 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(TRUE|FALSE)\b</string>
-					<key>name</key>
-					<string>constant.language.eo</string>
-				</dict>
-				<dict>
-					<key>match</key>
 					<string>\b([1-9]+[0-9]*|0)</string>
 					<key>name</key>
 					<string>constant.numeric.int.eo</string>
@@ -116,12 +110,6 @@
 					<string> &gt; </string>
 					<key>name</key>
 					<string>keyword.operator.bound.eo</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>\.\.\.</string>
-					<key>name</key>
-					<string>keyword.operator.vararg.eo</string>
 				</dict>
 				<dict>
 					<key>match</key>
