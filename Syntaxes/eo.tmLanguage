@@ -71,13 +71,19 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b([1-9]+[0-9]*|0)</string>
+					<string>\b0x[0-9a-fA-F]+\b</string>
+					<key>name</key>
+					<string>constant.numeric.hex.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>[\+\-]?([1-9][0-9]*|0)\b</string>
 					<key>name</key>
 					<string>constant.numeric.int.eo</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(\d+e[\-\+]?\d+)</string>
+					<string>[\+\-]?\d+\.\d+([eE][\+\-]?\d+)?</string>
 					<key>name</key>
 					<string>constant.numeric.float.eo</string>
 				</dict>
