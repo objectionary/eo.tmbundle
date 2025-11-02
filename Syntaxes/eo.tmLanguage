@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>^\+(package|alias|architect) .*</string>
+			<string>^\+[a-z][^ \t\r\n]*(\s+[^\t\r\n ]+)*</string>
 			<key>name</key>
 			<string>meta.eo</string>
 		</dict>
