@@ -101,6 +101,18 @@
 			<array>
 				<dict>
 					<key>match</key>
+					<string>\bQQ\b</string>
+					<key>name</key>
+					<string>keyword.control.home.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\bQ\b</string>
+					<key>name</key>
+					<string>keyword.control.root.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string> &gt; </string>
 					<key>name</key>
 					<string>keyword.operator.bound.eo</string>
@@ -146,6 +158,30 @@
 					<string>@</string>
 					<key>name</key>
 					<string>keyword.operator.decorator.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\?</string>
+					<key>name</key>
+					<string>keyword.operator.question.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>~</string>
+					<key>name</key>
+					<string>keyword.operator.tilde.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>'</string>
+					<key>name</key>
+					<string>keyword.operator.apostrophe.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>:</string>
+					<key>name</key>
+					<string>keyword.operator.colon.eo</string>
 				</dict>
 			</array>
 		</dict>
