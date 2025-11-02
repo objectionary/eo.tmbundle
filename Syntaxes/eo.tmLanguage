@@ -113,6 +113,12 @@
 				</dict>
 				<dict>
 					<key>match</key>
+					<string> \+&gt; </string>
+					<key>name</key>
+					<string>keyword.operator.test.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string> &gt; </string>
 					<key>name</key>
 					<string>keyword.operator.bound.eo</string>
