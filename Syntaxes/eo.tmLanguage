@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>^\+(package|alias|architect) .*</string>
+			<string>^\+[a-z][^ \t\r\n]*(\s+[^\t\r\n ]+)*</string>
 			<key>name</key>
 			<string>meta.eo</string>
 		</dict>
@@ -59,7 +59,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>^\#.*$</string>
+					<string>\#.*$</string>
 					<key>name</key>
 					<string>comment.line.eo</string>
 				</dict>
@@ -71,19 +71,19 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(TRUE|FALSE)\b</string>
+					<string>\b0x[0-9a-fA-F]+\b</string>
 					<key>name</key>
-					<string>constant.language.eo</string>
+					<string>constant.numeric.hex.eo</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b([1-9]+[0-9]*|0)</string>
+					<string>[\+\-]?([1-9][0-9]*|0)\b</string>
 					<key>name</key>
 					<string>constant.numeric.int.eo</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(\d+e[\-\+]?\d+)</string>
+					<string>[\+\-]?\d+\.\d+([eE][\+\-]?\d+)?</string>
 					<key>name</key>
 					<string>constant.numeric.float.eo</string>
 				</dict>
@@ -101,15 +101,27 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string> &gt; </string>
+					<string>\bQQ\b</string>
 					<key>name</key>
-					<string>keyword.operator.bound.eo</string>
+					<string>keyword.control.home.eo</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\.\.\.</string>
+					<string>\bQ\b</string>
 					<key>name</key>
-					<string>keyword.operator.vararg.eo</string>
+					<string>keyword.control.root.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string> \+&gt; </string>
+					<key>name</key>
+					<string>keyword.operator.test.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string> &gt; </string>
+					<key>name</key>
+					<string>keyword.operator.bound.eo</string>
 				</dict>
 				<dict>
 					<key>match</key>
@@ -147,6 +159,30 @@
 					<key>name</key>
 					<string>keyword.operator.decorator.eo</string>
 				</dict>
+				<dict>
+					<key>match</key>
+					<string>\?</string>
+					<key>name</key>
+					<string>keyword.operator.question.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>~</string>
+					<key>name</key>
+					<string>keyword.operator.tilde.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>'</string>
+					<key>name</key>
+					<string>keyword.operator.apostrophe.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>:</string>
+					<key>name</key>
+					<string>keyword.operator.colon.eo</string>
+				</dict>
 			</array>
 		</dict>
 		<key>parens</key>
@@ -183,6 +219,35 @@
 			<array>
 				<dict>
 					<key>begin</key>
+					<string>"""</string>
+					<key>end</key>
+					<string>"""</string>
+					<key>name</key>
+					<string>string.quoted.triple.eo</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>\\u+[0-9A-Fa-f]{4}</string>
+							<key>name</key>
+							<string>constant.character.escape.unicode.eo</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\\[0-7]{1,3}</string>
+							<key>name</key>
+							<string>constant.character.escape.octal.eo</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\\[btnfr"'\\]</string>
+							<key>name</key>
+							<string>constant.character.escape.eo</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
 					<string>"</string>
 					<key>end</key>
 					<string>"</string>
@@ -192,7 +257,19 @@
 					<array>
 						<dict>
 							<key>match</key>
-							<string>\\.</string>
+							<string>\\u+[0-9A-Fa-f]{4}</string>
+							<key>name</key>
+							<string>constant.character.escape.unicode.eo</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\\[0-7]{1,3}</string>
+							<key>name</key>
+							<string>constant.character.escape.octal.eo</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\\[btnfr"'\\]</string>
 							<key>name</key>
 							<string>constant.character.escape.eo</string>
 						</dict>
