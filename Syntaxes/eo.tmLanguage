@@ -77,15 +77,15 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>[\+\-]?([1-9][0-9]*|0)\b</string>
+					<string>(?&lt;![\w-])[\+\-]?\d+\.\d+([eE][\+\-]?\d+)?</string>
 					<key>name</key>
-					<string>constant.numeric.int.eo</string>
+					<string>(?&lt;![\w-])constant.numeric.float.eo</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>[\+\-]?\d+\.\d+([eE][\+\-]?\d+)?</string>
+					<string>(?&lt;![\w-])[\+\-]?([1-9][0-9]*|0)\b</string>
 					<key>name</key>
-					<string>constant.numeric.float.eo</string>
+					<string>(?&lt;![\w-])constant.numeric.int.eo</string>
 				</dict>
 				<dict>
 					<key>match</key>
