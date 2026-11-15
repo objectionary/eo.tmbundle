@@ -101,6 +101,36 @@
 			<array>
 				<dict>
 					<key>match</key>
+					<string>\*</string>
+					<key>name</key>
+					<string>keyword.operator.tuple.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>/</string>
+					<key>name</key>
+					<string>keyword.operator.signature.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\bT\b</string>
+					<key>name</key>
+					<string>keyword.control.terminator.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\bI\b</string>
+					<key>name</key>
+					<string>keyword.control.identity.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>^\s*\|</string>
+					<key>name</key>
+					<string>keyword.operator.pipe.eo</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string>\bQQ\b</string>
 					<key>name</key>
 					<string>keyword.control.home.eo</string>
