@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) 2016-2026 Objectionary.com
+# SPDX-License-Identifier: MIT
+
 """Regression coverage for binding operators in the EO keyword rules."""
 
 from pathlib import Path
