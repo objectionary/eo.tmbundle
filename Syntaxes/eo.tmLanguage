@@ -87,15 +87,15 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?&lt;![\w-])[\+\-]?([1-9][0-9]*|0)\b</string>
+					<string>(?&lt;![\w-])(--|[0-9A-F]{2}(-[0-9A-F]{2})+-?|[0-9A-F]{2}-)(?![\w-])</string>
 					<key>name</key>
-					<string>(?&lt;![\w-])constant.numeric.int.eo</string>
+					<string>constant.numeric.bytes.eo</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b([0-9A-F][0-9A-F](\-[0-9A-F][0-9A-F])*)\b</string>
+					<string>(?&lt;![\w-])[\+\-]?([1-9][0-9]*|0)\b</string>
 					<key>name</key>
-					<string>constant.numeric.bytes.eo</string>
+					<string>(?&lt;![\w-])constant.numeric.int.eo</string>
 				</dict>
 			</array>
 		</dict>
